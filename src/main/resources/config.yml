@@ -1,0 +1,33 @@
+#============================================================
+#
+#
+# Server Essentials core
+# By iMrPop
+#
+#
+#============================================================
+#Server Name edit here!
+server-name: "Server"
+
+#============================================================
+#
+# WELCOME/JOIN/LEAVE MESSAGES
+#To disable the Message below just leave it empty like this""
+#
+#============================================================
+#You can use %server% to return the Server's Name.
+#You can add %player% to return the player name.
+#You can use color codes with & instead of put this § everytime.
+
+#This Welcome only the player Sees Below
+welcome-message: "§f§lWelcome %player% to the server! Enjoy your time here!"
+#this below is if you want only new players Seeing The Welcome-Message
+First-time-only: true
+
+#This is the Join message that everyone will see.
+join-message: "&f&lThe %player% Has Joined the game"
+
+#This is the Join message that everyone will see
+leave-message: "&f&lThe %player% Has left the game"
+
+

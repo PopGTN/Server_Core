@@ -1,0 +1,23 @@
+permission-message: "§4You don't have Permission to use this command. If you feel like this is a mistake please contact the server's administrator."
+player-target-error: "§4Player Couldn't be found"
+#============================================================
+#Flight Command Message
+#Prefixs: %Sender%, %TargetedPlayer%
+#============================================================
+#
+#flight-enabled: The Message that is sent to player that's fly was Enabled.
+#flight-disabled: The Message that is sent to player that's fly was Disabled.
+#flight-PlayerIsInCreative: the The Message that  is sent when the player is in Creative.
+#flight-senders-message-enabled: Message from Command Sender when targeted player fly is enabled
+#flight-senders-message-disable: Message from Command Sender when targeted player fly is Disabled
+#
+flight-enabled: "Your flight has been Enabled by %Sender%"
+
+flight-disabled: "Your flight has been disabled by %Sender%"
+playerIsIn: "§4This Player %TargetedPlayer% is not in Survival Mode"
+YourIsIn: "§4Your is Not in Survival Mode"
+flight-senders-message-enabled: "%TargetedPlayer% flight has been Enabled"
+flight-senders-message-disable: "%TargetedPlayer% flight has been disabled"
+
+MessageConfig.get().getString("playerIsInCreative").replaceAll("&","§").replaceAll("%Sender%",target.getDisplayName())
+ MessageConfig.get().getString("flight-disabled").replaceAll("&","§").replaceAll("%Sender%",player.getDisplayName())
