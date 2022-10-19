@@ -53,28 +53,9 @@ public class MessageConfig {
         header.add("============================================================");
         header.add("You can customize every message here for different Languages can be used");
         header.add("You can use color codes with & instead of put this § everytime.");
-        header.add("============================================================");
-        header.add(" ");
-        header.add("These one's below effect All commands");
-        header.add(" ");
-        header.add("============================================================");
-        header.add("permission-message: The Message for when players Don't have permissons to use a command");
-        header.add(" ");
-        header.add("player-target-error: The Error message when Players Can't be found");
-        header.add(" ");
-        header.add("============================================================");
-        header.add("Flight Command Message");
         header.add("Prefix's: %Sender%, %TargetedPlayer%, %command%");
         header.add("============================================================");
         header.add(" ");
-        header.add("command-usage: Command Usage");
-        header.add("flight-enabled: The Message that is sent to player that's fly was Enabled.");
-        header.add("flight-disabled: The Message that is sent to player that's fly was Disabled.");
-        header.add("flight-PlayerIsIn: the The Message that  is sent when the player is in Creative/spectator Mode.");
-        header.add("flight-senders-message-enabled: Message from Command Sender when targeted player fly is enabled");
-        header.add("flight-senders-message-disable: Message from Command Sender when targeted player fly is Disabled");
-        header.add(" ");
-        header.add("============================================================");
         get().options().setHeader(header);
 
         //For all Commands
@@ -82,21 +63,15 @@ public class MessageConfig {
         get().addDefault("player-target-error","§4Player Couldn't be found");
 
         //flight Commands
-
         get().addDefault("flight-command.command-usage","Please Enter a players name! Example: %commmand%");
-
         get().addDefault("flight-command.onEnabled","Your flight has been Enabled by %Sender%");
-
         get().addDefault("flight-command.onDisabled","Your flight has been disabled by %Sender%");
-
         get().addDefault("flight-command.PlayerIsNotInSurvival","§4This Player %TargetedPlayer% is not in Survival Mode");
-
         get().addDefault("flight-command.YourNotInSurvival","§4Your is Not in Survival Mode");
-
         get().addDefault("flight-command.senders-message-enabled","%TargetedPlayer% flight has been Enabled");
-
         get().addDefault("flight-command.senders-message-disabled","%TargetedPlayer% flight has been disabled");
-
+        //Invincible Commands
+        get().addDefault("Invincible.command-usage","Please Enter a players name! Example: %commmand%");
     }
 
 }
