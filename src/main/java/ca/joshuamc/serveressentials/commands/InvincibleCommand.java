@@ -78,7 +78,7 @@ public class InvincibleCommand implements CommandExecutor {
                     if (target.getAllowFlight() == false) {
                         target.setAllowFlight(true);
                         target.sendMessage(Component.text(MessageConfig.get().getString("invincible.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
-                        sender.sendMessage(Component.text(MessageConfig.get().getString("flight-command.senders-message-enabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
+                        sender.sendMessage(Component.text(MessageConfig.get().getString("invincible.senders-message-enabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                         return true;
                     } else {
                         target.setAllowFlight(false);

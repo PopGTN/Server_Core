@@ -62,6 +62,7 @@ public class MessageConfig {
         get().addDefault("permission-message","§4You don't have Permission to use this command. If you feel like this is a mistake please contact the server's administrator.");
         get().addDefault("player-target-error","§4Player Couldn't be found");
 
+        
         //flight Commands
         get().addDefault("flight-command.command-usage","Please Enter a players name! Example: %commmand%");
         get().addDefault("flight-command.onEnabled","Your flight has been Enabled by %Sender%");
@@ -70,8 +71,16 @@ public class MessageConfig {
         get().addDefault("flight-command.YourNotInSurvival","§4Your is Not in Survival Mode");
         get().addDefault("flight-command.senders-message-enabled","%TargetedPlayer% flight has been Enabled");
         get().addDefault("flight-command.senders-message-disabled","%TargetedPlayer% flight has been disabled");
+
+
         //Invincible Commands
         get().addDefault("invincible.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("invincible.onEnabled","Your flight has been Enabled by %Sender%");
+        get().addDefault("invincible.onDisabled","Your flight has been disabled by %Sender%");
+        get().addDefault("invincible.PlayerIsNotInSurvival","§4This Player %TargetedPlayer% is not in Survival Mode");
+        get().addDefault("invincible.YourNotInSurvival","§4Your is Not in Survival Mode");
+        get().addDefault("invincible.senders-message-enabled","%TargetedPlayer% flight has been Enabled");
+        get().addDefault("invincible.senders-message-disabled","%TargetedPlayer% flight has been disabled");
     }
 
 }
