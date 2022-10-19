@@ -13,7 +13,6 @@ public class MessageConfig {
     private static File file;
     private static FileConfiguration customFile;
 
-
     //Finds or generates the custom config file
     public static void setup(){
         file = new File(Bukkit.getServer().getPluginManager().getPlugin("Server-Essentials").getDataFolder(), "Messages.yml");
@@ -82,13 +81,13 @@ public class MessageConfig {
         get().addDefault("invincible.senders-message-enabled","%TargetedPlayer% invincibility has been Enabled");
         get().addDefault("invincible.senders-message-disabled","%TargetedPlayer% invincibility has been disabled");
 
+
         //Vanish Command
-        //Invincible Commands
         get().addDefault("vanish.command-usage","Please Enter a players name! Example: %commmand%");
-        get().addDefault("vanish.onEnabled","Your invincibility has been Enabled by %Sender%");
-        get().addDefault("vanish.onDisabled","Your invincibility has been disabled by %Sender%");
-        get().addDefault("vanish.senders-message-enabled","%TargetedPlayer% invincibility has been Enabled");
-        get().addDefault("vanish.senders-message-disabled","%TargetedPlayer% invincibility has been disabled");
+        get().addDefault("vanish.onEnabled","Your Vanish has been Enabled by %Sender%");
+        get().addDefault("vanish.onDisabled","Your Vanish has been disabled by %Sender%");
+        get().addDefault("vanish.senders-message-enabled","%TargetedPlayer% Vanish has been Enabled");
+        get().addDefault("vanish.senders-message-disabled","%TargetedPlayer% Vanish has been disabled");
 
     }
 }

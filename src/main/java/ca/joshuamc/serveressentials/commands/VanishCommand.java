@@ -28,12 +28,16 @@ public class VanishCommand implements CommandExecutor {
                 return true;
             } else {
                 if (target.isInvisible() == false) {
-                    target.setInvisible(true);
+                    target.setAllowFlight(true);
+                    target.setInvulnerable(true);
+                    target.setInvisible(false);
                     target.sendMessage(Component.text(MessageConfig.get().getString("vanish.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , "Console")));
                     sender.sendMessage(Component.text(MessageConfig.get().getString("vanish.senders-message-enabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                     return true;
                 } else {
                     target.setInvisible(false);
+                    target.setInvulnerable(true);
+                    if (target.getGameMode() == GameMode.SURVIVAL){target.setAllowFlight(false);}
                     target.sendMessage(Component.text(MessageConfig.get().getString("vanish.onDisabled").replaceAll("&" , "§").replaceAll("%Sender%" , "Console")));
                     sender.sendMessage(Component.text(MessageConfig.get().getString("vanish.senders-message-disabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                     return true;
@@ -47,11 +51,15 @@ public class VanishCommand implements CommandExecutor {
                 return true;
             }else{
                 if (player.isInvisible() == false) {
-                    player.setInvisible(true);
+                    player.setInvulnerable(true);
+                    player.setAllowFlight(true);
+                    player.setInvisible(false);
                     player.sendMessage(Component.text(MessageConfig.get().getString("vanish.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
                     return true;
                 } else {
+                    if (player.getGameMode() == GameMode.SURVIVAL){player.setAllowFlight(false);}
                     player.setInvisible(false);
+                    player.setInvulnerable(true);
                     player.sendMessage(Component.text(MessageConfig.get().getString("vanish.onDisabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
                     return true;
                 }
@@ -70,12 +78,17 @@ public class VanishCommand implements CommandExecutor {
                     return true;
                 } else if (target.getGameMode() == GameMode.SURVIVAL) {
                     if (target.isInvisible() == false) {
+                        target.setInvulnerable(false);
+                        target.setAllowFlight(true);
+                        if (target.getGameMode() == GameMode.SURVIVAL){target.setAllowFlight(true);}
                         target.setInvisible(true);
                         target.sendMessage(Component.text(MessageConfig.get().getString("vanish.onEnabled").replaceAll("&", "§").replaceAll("%Sender%", player.getDisplayName())));
                         sender.sendMessage(Component.text(MessageConfig.get().getString("vanish.senders-message-enabled").replaceAll("&", "§").replaceAll("%TargetedPlayer%", target.getDisplayName())));
                         return true;
                     } else {
+                        if (target.getGameMode() == GameMode.SURVIVAL){target.setAllowFlight(false);}
                         target.setInvisible(false);
+                        target.setInvulnerable(true);
                         target.sendMessage(Component.text(MessageConfig.get().getString("vanish.onDisabled").replaceAll("&", "§").replaceAll("%Sender%", player.getDisplayName())));
                         sender.sendMessage(Component.text(MessageConfig.get().getString("vanish.senders-message-disabled").replaceAll("&", "§").replaceAll("%TargetedPlayer%", target.getDisplayName())));
                         return true;
