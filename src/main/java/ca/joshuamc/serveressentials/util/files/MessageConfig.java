@@ -81,7 +81,15 @@ public class MessageConfig {
         get().addDefault("invincible.YourNotInSurvival","§4Your is Not in Survival Mode");
         get().addDefault("invincible.senders-message-enabled","%TargetedPlayer% invincibility has been Enabled");
         get().addDefault("invincible.senders-message-disabled","%TargetedPlayer% invincibility has been disabled");
-    }
 
+        //Vanish Command
+        //Invincible Commands
+        get().addDefault("vanish.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("vanish.onEnabled","Your invincibility has been Enabled by %Sender%");
+        get().addDefault("vanish.onDisabled","Your invincibility has been disabled by %Sender%");
+        get().addDefault("vanish.senders-message-enabled","%TargetedPlayer% invincibility has been Enabled");
+        get().addDefault("vanish.senders-message-disabled","%TargetedPlayer% invincibility has been disabled");
+
+    }
 }
 
