@@ -3,7 +3,6 @@ package Testlab;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-import org.jetbrains.annotations.NotNull;
 
 public class CustomEvent extends Event implements Cancellable {
 
@@ -32,7 +31,7 @@ public class CustomEvent extends Event implements Cancellable {
     }
 
     @Override
-    public @NotNull HandlerList getHandlers() {
+    public  HandlerList getHandlers() {
         return null;
     }
 }

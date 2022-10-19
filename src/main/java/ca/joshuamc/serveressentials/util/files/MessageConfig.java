@@ -67,7 +67,7 @@ public class MessageConfig {
         get().addDefault("flight-command.onEnabled","Your flight has been Enabled by %Sender%");
         get().addDefault("flight-command.onDisabled","Your flight has been disabled by %Sender%");
         get().addDefault("flight-command.PlayerIsNotInSurvival","§4This Player %TargetedPlayer% is not in Survival Mode");
-        get().addDefault("flight-command.YourNotInSurvival","§4Your is Not in Survival Mode");
+        get().addDefault("flight-command.YourNotInSurvival","§4You must be in Survival Mode");
         get().addDefault("flight-command.senders-message-enabled","%TargetedPlayer% flight has been Enabled");
         get().addDefault("flight-command.senders-message-disabled","%TargetedPlayer% flight has been disabled");
 

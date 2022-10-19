@@ -27,4 +27,4 @@ commands:
   vanish:
     description: Enable/disable invincibility.
     usage: /<command> [Player]
-    aliases: [invisible,invisibility]
+    aliases: [invisible,invisibility,v]

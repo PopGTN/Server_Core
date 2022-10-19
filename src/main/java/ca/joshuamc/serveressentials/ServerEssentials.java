@@ -11,6 +11,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import static ca.joshuamc.serveressentials.commands.VanishCommand.endVanish;
+
 //        List<String> messages = new List<String>();
 //        supplierNames.add("#Message the player would receive if they done got permission to use the commands");
 //        supplierNames.add("");
@@ -36,6 +38,7 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        endVanish();
         System.out.println("Server-Essentials as been stopped!");
 
     }
@@ -54,6 +57,6 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         serverEssentials.getCommand("invincible").setExecutor(new InvincibleCommand());
 
         //Vanish
-        serverEssentials.getCommand("Vanish").setExecutor(new VanishCommand());
+        serverEssentials.getCommand("vanish").setExecutor(new VanishCommand());
     }
 }

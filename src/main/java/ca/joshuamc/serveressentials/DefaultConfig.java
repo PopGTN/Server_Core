@@ -16,6 +16,7 @@ public class DefaultConfig {
 
 
 
+
     public static String getWelcomeMessage() {
         WELCOME_MESSAGE = plugin.getConfig().getString("welcome-message").replaceAll("&","§");
         return WELCOME_MESSAGE;
@@ -32,7 +33,7 @@ public class DefaultConfig {
     }
 
     public static String getLeaveMessage() {
-        LEAVE_MESSAGE = plugin.getConfig().getString("join-message").replaceAll("&","§");
+        LEAVE_MESSAGE = plugin.getConfig().getString("leave-message").replaceAll("&","§");
         return LEAVE_MESSAGE;
     }
 
