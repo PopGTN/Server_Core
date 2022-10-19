@@ -18,5 +18,9 @@ commands:
     aliases: flight
   shout:
     description: BoardCast a colourful Message to grab attention of Everyone
-
+    usage: /<command> #[Username]
     aliases: broadcast
+  Invincible:
+    description: Enable/disable Flight.
+    usage: /<command> #[Username]
+    aliases: [god,superman]

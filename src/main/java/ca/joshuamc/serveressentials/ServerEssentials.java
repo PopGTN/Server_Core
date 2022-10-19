@@ -2,6 +2,7 @@ package ca.joshuamc.serveressentials;
 
 
 import ca.joshuamc.serveressentials.commands.FlightCommand;
+import ca.joshuamc.serveressentials.commands.InvincibleCommand;
 import ca.joshuamc.serveressentials.events.JoinAndLeaveMessage;
 import ca.joshuamc.serveressentials.util.files.MessageConfig;
 import org.bukkit.Bukkit;
@@ -48,7 +49,8 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         //flight Commmand
         serverEssentials.getCommand("fly").setExecutor(new FlightCommand());
 
-        //vanish
+        //invincible
+        serverEssentials.getCommand("invincible").setExecutor(new InvincibleCommand());
 
 
 

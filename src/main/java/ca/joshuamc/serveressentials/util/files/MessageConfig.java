@@ -71,7 +71,7 @@ public class MessageConfig {
         get().addDefault("flight-command.senders-message-enabled","%TargetedPlayer% flight has been Enabled");
         get().addDefault("flight-command.senders-message-disabled","%TargetedPlayer% flight has been disabled");
         //Invincible Commands
-        get().addDefault("Invincible.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("invincible.command-usage","Please Enter a players name! Example: %commmand%");
     }
 
 }
