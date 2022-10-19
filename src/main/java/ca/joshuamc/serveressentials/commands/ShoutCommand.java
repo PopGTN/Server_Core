@@ -13,6 +13,7 @@ public class ShoutCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender , @NotNull Command command , @NotNull String label , @NotNull String[] args) {
 
+        //This Command is very poorly Made and will be receiving an update
         if (!(sender instanceof Player)) {
             sender.sendMessage(Component.text("Only players can run this Command"));
             return true;
