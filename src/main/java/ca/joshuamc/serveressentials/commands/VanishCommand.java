@@ -42,7 +42,7 @@ public class VanishCommand implements CommandExecutor {
 
         } else if ((sender instanceof Player) && (args.length == 0)) {
             Player player = (Player) sender;
-            if (!player.hasPermission("se.Invisible")) {
+            if (!player.hasPermission("se.vanish")) {
                 sender.sendMessage(Component.text(MessageConfig.get().getString("vanish.command.permission-message").replaceAll("&", "§")));
                 return true;
             }else{
