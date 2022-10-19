@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import ca.joshuamc.serveressentials.files.MessageConfig;
+import ca.joshuamc.serveressentials.util.files.MessageConfig;
 
 
 public class ShoutCommand implements CommandExecutor {

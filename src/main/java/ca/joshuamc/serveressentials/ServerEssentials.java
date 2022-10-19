@@ -3,7 +3,7 @@ package ca.joshuamc.serveressentials;
 
 import ca.joshuamc.serveressentials.commands.FlightCommand;
 import ca.joshuamc.serveressentials.events.JoinAndLeaveMessage;
-import ca.joshuamc.serveressentials.files.MessageConfig;
+import ca.joshuamc.serveressentials.util.files.MessageConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;

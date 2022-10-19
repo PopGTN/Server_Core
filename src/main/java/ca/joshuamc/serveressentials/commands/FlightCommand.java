@@ -1,7 +1,7 @@
 package ca.joshuamc.serveressentials.commands;
 
 
-import ca.joshuamc.serveressentials.files.MessageConfig;
+import ca.joshuamc.serveressentials.util.files.MessageConfig;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;

@@ -1,4 +1,4 @@
-package ca.joshuamc.serveressentials.files;
+package ca.joshuamc.serveressentials.util.files;
 
 
 import org.bukkit.Bukkit;
