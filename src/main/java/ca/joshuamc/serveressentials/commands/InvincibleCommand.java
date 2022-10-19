@@ -27,13 +27,13 @@ public class InvincibleCommand implements CommandExecutor {
                 sender.sendMessage(MessageConfig.get().getString("player-target-error"));
                 return true;
             } else if (target.getGameMode() == GameMode.SURVIVAL) {
-                if (target.getAllowFlight() == false) {
-                    target.setAllowFlight(true);
+                if (target.isInvulnerable() == false) {
+                    target.setInvulnerable(true);
                     target.sendMessage(Component.text(MessageConfig.get().getString("invincible.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , "Console")));
                     sender.sendMessage(Component.text(MessageConfig.get().getString("invincible.senders-message-enabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                     return true;
                 } else {
-                    target.setAllowFlight(false);
+                    target.setInvulnerable(false);
                     target.sendMessage(Component.text(MessageConfig.get().getString("invincible.onDisabled").replaceAll("&" , "§").replaceAll("%Sender%" , "Console")));
                     sender.sendMessage(Component.text(MessageConfig.get().getString("invincible.senders-message-disabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                     return true;
@@ -49,12 +49,12 @@ public class InvincibleCommand implements CommandExecutor {
                 sender.sendMessage(Component.text(MessageConfig.get().getString("invincible.command.permission-message").replaceAll("&" , "§")));
                 return true;
             } else if (player.getGameMode() == GameMode.SURVIVAL) {
-                if (player.getAllowFlight() == false) {
-                    player.setAllowFlight(true);
+                if (player.isInvulnerable() == false) {
+                    player.setInvulnerable(true);
                     player.sendMessage(Component.text(MessageConfig.get().getString("invincible.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
                     return true;
                 } else {
-                    player.setAllowFlight(false);
+                    player.setInvulnerable(false);
                     player.sendMessage(Component.text(MessageConfig.get().getString("invincible.onDisabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
                     return true;
                 }
@@ -75,13 +75,13 @@ public class InvincibleCommand implements CommandExecutor {
                     sender.sendMessage(MessageConfig.get().getString("player-target-error"));
                     return true;
                 } else if (target.getGameMode() == GameMode.SURVIVAL) {
-                    if (target.getAllowFlight() == false) {
-                        target.setAllowFlight(true);
+                    if (target.isInvulnerable() == false) {
+                        target.setInvulnerable(true);
                         target.sendMessage(Component.text(MessageConfig.get().getString("invincible.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
                         sender.sendMessage(Component.text(MessageConfig.get().getString("invincible.senders-message-enabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                         return true;
                     } else {
-                        target.setAllowFlight(false);
+                        target.setInvulnerable(false);
                         target.sendMessage(Component.text(MessageConfig.get().getString("invincible.onDisabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName())));
                         sender.sendMessage(Component.text(MessageConfig.get().getString("invincible.senders-message-disabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName())));
                         return true;
