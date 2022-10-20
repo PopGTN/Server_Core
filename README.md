@@ -22,13 +22,15 @@ Here are some of the features
     * Permissions
         * `se.vanish` Allows players to toggle flight for themselves.
           * `se.vanish.other`  Allows players toggle flight for other
-* /invincible - basically toggles invincibility.
+* /invincible -(Disabled) basically toggles invincibility.
     * Permissions
         * `se.invincible` Allows players to toggle flight for themselves.
             * `se.invincible.other`  Allows players toggle flight for other
 
 ## Todo 
 Here are some features that is on my Todo List
+* Need to add Proper invincible mode 
+* need to add invincible mode to Vanish
 * Shout Command is Very Poorly Made fix it
 * Make Language fills
 * Make Every message in this plugin Customizable
