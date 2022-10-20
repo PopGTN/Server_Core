@@ -69,17 +69,18 @@ public class InvincibleCommand implements CommandExecutor {
             } else {
                 String playerName = args[0];
                 Player target = Bukkit.getPlayerExact(playerName);
+
                 if (target == null) {
                     sender.sendMessage(MessageConfig.get().getString("player-target-error"));
                     return true;
                 } else if (target.getGameMode() == GameMode.SURVIVAL) {
                     if (target.isInvulnerable() == false) {
-                        target.setInvulnerable(true);
+                        target.setInvulnerable(false);
                         target.sendMessage(MessageConfig.get().getString("invincible.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName()));
                         sender.sendMessage(MessageConfig.get().getString("invincible.senders-message-enabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName()));
                         return true;
                     } else {
-                        target.setInvulnerable(false);
+                        target.setInvulnerable(true);
                         target.sendMessage(MessageConfig.get().getString("invincible.onDisabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName()));
                         sender.sendMessage(MessageConfig.get().getString("invincible.senders-message-disabled").replaceAll("&" , "§").replaceAll("%TargetedPlayer%" , target.getDisplayName()));
                         return true;

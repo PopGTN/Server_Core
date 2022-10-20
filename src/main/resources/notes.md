@@ -18,3 +18,9 @@ These are something I learn that I want to remember.
 
 ### Ternary Operator
     variableType variableName = (boolean) ? "if true" : "If False";
+
+### References
+Some links that I want to remember and things I used
+
+https://gist.github.com/aadnk/3928137
+
