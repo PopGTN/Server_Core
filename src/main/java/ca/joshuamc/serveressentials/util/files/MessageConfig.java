@@ -1,4 +1,4 @@
-package ca.joshuamc.serveressentials.files;
+package ca.joshuamc.serveressentials.util.files;
 
 
 import org.bukkit.Bukkit;
@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class MessageConfig {
     private static File file;
     private static FileConfiguration customFile;
-
 
     //Finds or generates the custom config file
     public static void setup(){
@@ -53,51 +52,43 @@ public class MessageConfig {
         header.add("============================================================");
         header.add("You can customize every message here for different Languages can be used");
         header.add("You can use color codes with & instead of put this § everytime.");
-        header.add("============================================================");
-        header.add(" ");
-        header.add("These one's below effect All commands");
-        header.add(" ");
-        header.add("============================================================");
-        header.add("permission-message: The Message for when players Don't have permissons to use a command");
-        header.add(" ");
-        header.add("player-target-error: The Error message when Players Can't be found");
-        header.add(" ");
-        header.add("============================================================");
-        header.add("Flight Command Message");
         header.add("Prefix's: %Sender%, %TargetedPlayer%, %command%");
         header.add("============================================================");
         header.add(" ");
-        header.add("command-usage: Command Usage");
-        header.add("flight-enabled: The Message that is sent to player that's fly was Enabled.");
-        header.add("flight-disabled: The Message that is sent to player that's fly was Disabled.");
-        header.add("flight-PlayerIsIn: the The Message that  is sent when the player is in Creative/spectator Mode.");
-        header.add("flight-senders-message-enabled: Message from Command Sender when targeted player fly is enabled");
-        header.add("flight-senders-message-disable: Message from Command Sender when targeted player fly is Disabled");
-        header.add(" ");
-        header.add("============================================================");
         get().options().setHeader(header);
 
         //For all Commands
         get().addDefault("permission-message","§4You don't have Permission to use this command. If you feel like this is a mistake please contact the server's administrator.");
         get().addDefault("player-target-error","§4Player Couldn't be found");
 
+
         //flight Commands
-
         get().addDefault("flight-command.command-usage","Please Enter a players name! Example: %commmand%");
-
         get().addDefault("flight-command.onEnabled","Your flight has been Enabled by %Sender%");
-
         get().addDefault("flight-command.onDisabled","Your flight has been disabled by %Sender%");
-
         get().addDefault("flight-command.PlayerIsNotInSurvival","§4This Player %TargetedPlayer% is not in Survival Mode");
-
-        get().addDefault("flight-command.YourNotInSurvival","§4Your is Not in Survival Mode");
-
+        get().addDefault("flight-command.YourNotInSurvival","§4You must be in Survival Mode");
         get().addDefault("flight-command.senders-message-enabled","%TargetedPlayer% flight has been Enabled");
-
         get().addDefault("flight-command.senders-message-disabled","%TargetedPlayer% flight has been disabled");
 
-    }
 
+        //Invincible Commands
+        get().addDefault("invincible.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("invincible.onEnabled","Your invincibility has been Enabled by %Sender%");
+        get().addDefault("invincible.onDisabled","Your invincibility has been disabled by %Sender%");
+        get().addDefault("invincible.PlayerIsNotInSurvival","§4This Player %TargetedPlayer% is not in Survival Mode");
+        get().addDefault("invincible.YourNotInSurvival","§4Your is Not in Survival Mode");
+        get().addDefault("invincible.senders-message-enabled","%TargetedPlayer% invincibility has been Enabled");
+        get().addDefault("invincible.senders-message-disabled","%TargetedPlayer% invincibility has been disabled");
+
+
+        //Vanish Command
+        get().addDefault("vanish.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("vanish.onEnabled","Your Vanish has been Enabled by %Sender%");
+        get().addDefault("vanish.onDisabled","Your Vanish has been disabled by %Sender%");
+        get().addDefault("vanish.senders-message-enabled","%TargetedPlayer% Vanish has been Enabled");
+        get().addDefault("vanish.senders-message-disabled","%TargetedPlayer% Vanish has been disabled");
+
+    }
 }
 

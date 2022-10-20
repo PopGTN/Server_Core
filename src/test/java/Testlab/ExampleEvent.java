@@ -4,7 +4,7 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class CustomEvent extends Event implements Cancellable {
+public class ExampleEvent extends Event implements Cancellable {
 
     private static final HandlerList HANDLERS = new HandlerList();
     private final String playerName;
@@ -15,7 +15,8 @@ public class CustomEvent extends Event implements Cancellable {
     }
 
 
-    public CustomEvent(String playerName) {
+
+    public ExampleEvent(String playerName) {
         this.playerName = playerName;
         this.isCancelled = false;
     }
@@ -31,7 +32,12 @@ public class CustomEvent extends Event implements Cancellable {
     }
 
     @Override
-    public  HandlerList getHandlers() {
-        return null;
+    public HandlerList getHandlers() {
+        return HANDLERS;
     }
+
+    public String getPlayerName() {
+        return this.playerName;
+    }
+
 }
