@@ -44,7 +44,7 @@ public class InvincibleCommand implements CommandExecutor {
         } else if ((sender instanceof Player) && (args.length == 0)) {
             Player player = (Player) sender;
             if (!player.hasPermission("se.invincible")) {
-                sender.sendMessage(MessageConfig.get().getString("invincible.command.permission-message").replaceAll("&" , "§"));
+                sender.sendMessage(MessageConfig.get().getString("permission-message").replaceAll("&" , "§"));
                 return true;
             } else if (player.getGameMode() == GameMode.SURVIVAL) {
                 if (player.isInvulnerable() == false) {
