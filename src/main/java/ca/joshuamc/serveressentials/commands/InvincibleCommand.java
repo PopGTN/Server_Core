@@ -69,6 +69,7 @@ public class InvincibleCommand implements CommandExecutor {
             } else {
                 String playerName = args[0];
                 Player target = Bukkit.getPlayerExact(playerName);
+
                 if (target == null) {
                     sender.sendMessage(MessageConfig.get().getString("player-target-error"));
                     return true;
