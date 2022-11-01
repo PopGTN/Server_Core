@@ -1,4 +1,4 @@
-package ca.joshuamc.serveressentials.events;
+package ca.joshuamc.serveressentials.listeners;
 
 import ca.joshuamc.serveressentials.DefaultConfig;
 import ca.joshuamc.serveressentials.ServerEssentials;
@@ -45,3 +45,4 @@ public class JoinAndLeaveMessage implements Listener {
         leave.setQuitMessage(leaveMessage);
     }
 }
+

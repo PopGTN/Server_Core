@@ -2,8 +2,15 @@ package ca.joshuamc.serveressentials;
 
 
 import ca.joshuamc.serveressentials.commands.FlightCommand;
+<<<<<<< Updated upstream
+=======
+import ca.joshuamc.serveressentials.commands.InvincibleCommand;
+import ca.joshuamc.serveressentials.commands.ShoutCommand;
+>>>>>>> Stashed changes
 import ca.joshuamc.serveressentials.commands.VanishCommand;
-import ca.joshuamc.serveressentials.events.JoinAndLeaveMessage;
+import ca.joshuamc.serveressentials.listeners.BlockBreakListener;
+import ca.joshuamc.serveressentials.listeners.JoinAndLeaveMessage;
+import ca.joshuamc.serveressentials.listeners.OnSpawnerBreakEvent;
 import ca.joshuamc.serveressentials.util.files.MessageConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -14,10 +21,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 
 
-//        List<String> messages = new List<String>();
-//        supplierNames.add("#Message the player would receive if they done got permission to use the commands");
-//        supplierNames.add("");
-//        supplierNames.add("sup3");
 public final class ServerEssentials extends JavaPlugin implements Listener {
     public ArrayList<Player> vanishlist = new ArrayList<>();
     @Override
@@ -47,6 +50,9 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         PluginManager pm = Bukkit.getServer().getPluginManager();
 
         pm.registerEvents(new JoinAndLeaveMessage(this), this);
+        pm.registerEvents(new BlockBreakListener(), this);
+        pm.registerEvents(new OnSpawnerBreakEvent(), this);
+
     }
     public void registerCommands(ServerEssentials serverEssentials) {
 
@@ -59,5 +65,8 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
 
         //Vanish
         serverEssentials.getCommand("vanish").setExecutor(new VanishCommand(this));
+
+        //Shout
+        serverEssentials.getCommand("shout").setExecutor(new ShoutCommand());
     }
 }

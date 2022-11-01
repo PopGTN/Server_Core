@@ -12,6 +12,8 @@ public class DefaultConfig {
     private static String JOIN_MESSAGE;
     private static String LEAVE_MESSAGE;
     private static String INVALID_PERMISSION;
+    private static boolean SILK_TOUCH_SPAWNERS;
+    private static boolean SILK_TOUCH_SPAWNERS_PERM_ONLY;
     private static Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("Server-Essentials");
 
 
@@ -45,5 +47,15 @@ public class DefaultConfig {
     public static String getInvalidPermission(ServerEssentials plugin) {
         INVALID_PERMISSION = plugin.getConfig().getString("permission-message").replaceAll("&","§");
         return INVALID_PERMISSION;
+    }
+
+    public static boolean isSilkTouchSpawners() {
+        SILK_TOUCH_SPAWNERS = plugin.getConfig().getBoolean("silk-touch-spawners");
+        return SILK_TOUCH_SPAWNERS;
+    }
+
+    public static boolean isSilkTouchSpawnersPermOnly() {
+        SILK_TOUCH_SPAWNERS = plugin.getConfig().getBoolean("silk-touch-spawners-perm-only");
+        return SILK_TOUCH_SPAWNERS_PERM_ONLY;
     }
 }

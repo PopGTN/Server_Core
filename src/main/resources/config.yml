@@ -7,7 +7,7 @@
 #
 #============================================================
 #Server Name edit here!
-server-name: "Server"
+server-name: "the Server"
 
 #============================================================
 #
@@ -20,7 +20,7 @@ server-name: "Server"
 #You can use color codes with & instead of put this § everytime.
 
 #This Welcome only the player Sees Below
-welcome-message: "§f§lWelcome %player% to the server! Enjoy your time here!"
+welcome-message: "§f§lWelcome %player% to %server%! Enjoy your time here!"
 #this below is if you want only new players Seeing The Welcome-Message
 First-time-only: true
 
@@ -31,3 +31,12 @@ join-message: "&f&lThe %player% Has Joined the game"
 leave-message: "&f&lThe %player% Has left the game"
 
 
+#============================================================
+# Silk touch Spawners
+#============================================================
+#Enable/Disable the ability to Silk Touch spawners
+silk-touch-spawners: true
+
+#Enable/Disable if silktouching spawners is for everyone or not.
+#if true you must have the permission "se.silktouchspawner"
+silk-touch-spawners-perm-only: false

@@ -30,16 +30,21 @@ public class ShoutCommand implements CommandExecutor {
             player.getServer().broadcastMessage(player.getDisplayName()+ " Shouted: " + word);
 
         } else {
-            StringBuilder builder = new StringBuilder();
+            String finalMessage = null;
+            for (int i = 0; i < args.length; i++) {
+                finalMessage += args[i];
+            }
+
+
+/*            StringBuilder builder = new StringBuilder();
 
             for (int i = 0; i < args.length; i++) {
 
                 builder.append(args[i]);
                 builder.append(" ");
             }
-            String finalMessage = builder.toString().stripTrailing();
+            String finalMessage = builder.toString().stripTrailing();*/
             player.getServer().broadcastMessage(player.getDisplayName()+ " Shout's: " + finalMessage);
-
         }
         return true;
     }
