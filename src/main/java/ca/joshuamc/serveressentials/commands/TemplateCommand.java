@@ -39,7 +39,7 @@ public class TemplateCommand implements CommandExecutor {
             //Targeted at other
         } else if ((sender instanceof Player) && (args.length == 1)) {
             Player player = (Player) sender;
-            if (!sender.hasPermission("se.fly.others")) {
+            if (!sender.hasPermission("se.CommandName.others")) {
                 sender.sendMessage(MessageConfig.get().getString("permission-message").replaceAll("&" , "§"));
                 return true;
             } else {

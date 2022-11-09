@@ -5,13 +5,11 @@ api-version: 1.19
 authors: [ iMrPop ]
 description: My first plugin
 prefix: Server-Essentials
-softdepend: [ProtocolLib]
 commands:
   #CommandName
     #description:
     #usage: /<command> [optionalParam] requiredParam
     #aliases: aliase or [aliase1,aliase2,aliase3,etc]
-
   fly:
     description: Enable/disable Flight.
     usage: /<command> [Player]
@@ -20,6 +18,10 @@ commands:
     description: BoardCast a colourful Message to grab attention of Everyone
     usage: /<command>
     aliases: broadcast
+  gamemode:
+    description: change your gamemode.
+    usage: /<command> #<survival|creative|adventure|spectator> [player]
+    aliases: [ gm,gmc,gms,gma,gmsp,egm,egmc,egms,egma,egmsp,creative,survival,adventure,spectator ]
   invincible:
     description: Enable/disable invincibility.
     usage: /<command> [Player]
@@ -28,3 +30,7 @@ commands:
     description: Enable/disable invincibility.
     usage: /<command> [Player]
     aliases: [invisible,invisibility,v]
+  8ball:
+    description: Get 8ball answer
+    usage: /<command>
+    aliases: broadcast

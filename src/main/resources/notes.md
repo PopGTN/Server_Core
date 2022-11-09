@@ -50,11 +50,67 @@ public class Main {
             case 7:
                 System.out.println("Sunday");
                 break;
+        Default;
+              System.out.println("Sunday");
         }
     }
 }
 ````
+Switch with strings
+````
+    public String getDayDescription() {
+        String output = "";
 
+        switch (description.toLowerCase()) {
+
+            //Add any temperature conditions that apply to rainy
+            case "rainy":
+                if (temperature >= 5) {
+                    output += "it is rainy";
+                }
+                if (temperature < 5) {
+                    output += "it is a terrible day";
+                }
+                break;
+            //Add any temperature conditions that apply to sunny
+            case "sunny":
+                if (temperature > 15) {
+                    output += "it is a nice day";
+                }
+                // * - "it is an OK day" if it is not "rainy" and the weather is between 5 and 15 degrees. 
+                if ((temperature >= 5) && (temperature <= 15)) {                    
+                        output += "it is an OK day";
+                }
+                if (temperature > 25) {
+                    output += "it is a great day";
+                }
+                break;
+            // * - "it is a nice day" if the temperature is over 15 degrees and it is not "rainy". 
+            //Add any temperature conditions that apply to cloudy
+            case "cloudy":
+                if (temperature > 15) {
+                    output += "it is a nice day";
+                }
+                // * - "it is an OK day" if it is not "rainy" and the weather is between 5 and 15 degrees. 
+                if ((temperature >= 5) && (temperature <= 15)) {                    
+                        output += "it is an OK day";
+                }
+                break;
+        }
+        return output;
+    }
+````
+## Get a Random Number
+````
+    public int getRandom(int max, int min) {
+        return (int) Math.floor(Math.random() * (max - min + 1) + min);
+    }
+````
+### You assign values in if statments parmintors
+````
+if ( var1 <= var2)
+//Var var 1 will = VAR 2
+````
 ### References
 Some links that I want to remember and things I used
 

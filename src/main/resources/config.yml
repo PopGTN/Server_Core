@@ -30,13 +30,8 @@ join-message: "&f&lThe %player% Has Joined the game"
 #This is the Join message that everyone will see
 leave-message: "&f&lThe %player% Has left the game"
 
-
 #============================================================
-# Silk touch Spawners
+# 8 Ball
 #============================================================
-#Enable/Disable the ability to Silk Touch spawners
-silk-touch-spawners: true
-
-#Enable/Disable if silktouching spawners is for everyone or not.
-#if true you must have the permission "se.silktouchspawner"
-silk-touch-spawners-perm-only: false
+#Set if broadcast questions and answer to everyone or not
+broadcast-question: true

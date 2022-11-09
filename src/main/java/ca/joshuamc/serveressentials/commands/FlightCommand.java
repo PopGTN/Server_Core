@@ -23,7 +23,7 @@ public class FlightCommand implements CommandExecutor {
             if (target == null) {
                 sender.sendMessage(MessageConfig.get().getString("player-target-error"));
                 return true;
-            } else if (target.getGameMode() == GameMode.SURVIVAL) {
+            } else if (target.getGameMode() == GameMode.SURVIVAL ||  target.getGameMode() == GameMode.ADVENTURE) {
                 if (target.getAllowFlight() == false) {
                     target.setAllowFlight(true);
                     target.sendMessage(MessageConfig.get().getString("flight-command.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , "Console"));
@@ -46,7 +46,7 @@ public class FlightCommand implements CommandExecutor {
             if (!player.hasPermission("se.fly")) {
                 sender.sendMessage(MessageConfig.get().getString("flight-command.command.permission-message").replaceAll("&" , "§"));
                 return true;
-            } else if (player.getGameMode() == GameMode.SURVIVAL) {
+            } else if (player.getGameMode() == GameMode.SURVIVAL || player.getGameMode() ==GameMode.ADVENTURE) {
                 if (player.getAllowFlight() == false) {
                     player.setAllowFlight(true);
                     player.sendMessage(MessageConfig.get().getString("flight-command.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName()));
@@ -72,7 +72,7 @@ public class FlightCommand implements CommandExecutor {
                 if (target == null) {
                     sender.sendMessage(MessageConfig.get().getString("player-target-error"));
                     return true;
-                } else if (target.getGameMode() == GameMode.SURVIVAL) {
+                } else if (target.getGameMode() == GameMode.SURVIVAL ||  target.getGameMode() == GameMode.ADVENTURE) {
                     if (target.getAllowFlight() == false) {
                         target.setAllowFlight(true);
                         target.sendMessage(MessageConfig.get().getString("flight-command.onEnabled").replaceAll("&" , "§").replaceAll("%Sender%" , player.getDisplayName()));

@@ -1,16 +1,8 @@
 package ca.joshuamc.serveressentials;
 
 
-import ca.joshuamc.serveressentials.commands.FlightCommand;
-<<<<<<< Updated upstream
-=======
-import ca.joshuamc.serveressentials.commands.InvincibleCommand;
-import ca.joshuamc.serveressentials.commands.ShoutCommand;
->>>>>>> Stashed changes
-import ca.joshuamc.serveressentials.commands.VanishCommand;
-import ca.joshuamc.serveressentials.listeners.BlockBreakListener;
+import ca.joshuamc.serveressentials.commands.*;
 import ca.joshuamc.serveressentials.listeners.JoinAndLeaveMessage;
-import ca.joshuamc.serveressentials.listeners.OnSpawnerBreakEvent;
 import ca.joshuamc.serveressentials.util.files.MessageConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -50,8 +42,7 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         PluginManager pm = Bukkit.getServer().getPluginManager();
 
         pm.registerEvents(new JoinAndLeaveMessage(this), this);
-        pm.registerEvents(new BlockBreakListener(), this);
-        pm.registerEvents(new OnSpawnerBreakEvent(), this);
+
 
     }
     public void registerCommands(ServerEssentials serverEssentials) {
@@ -68,5 +59,11 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
 
         //Shout
         serverEssentials.getCommand("shout").setExecutor(new ShoutCommand());
+
+        //Gamemode Command
+        serverEssentials.getCommand("gamemode").setExecutor(new GamemodeCommand());
+
+
+        serverEssentials.getCommand("8ball").setExecutor(new EightBall());
     }
 }

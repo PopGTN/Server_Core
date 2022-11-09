@@ -60,6 +60,7 @@ public class MessageConfig {
         //For all Commands
         get().addDefault("permission-message","§4You don't have Permission to use this command. If you feel like this is a mistake please contact the server's administrator.");
         get().addDefault("player-target-error","§4Player Couldn't be found");
+        get().addDefault("players-only-message", "Players only");
 
 
         //flight Commands
@@ -88,6 +89,13 @@ public class MessageConfig {
         get().addDefault("vanish.onDisabled","Your Vanish has been disabled by %Sender%");
         get().addDefault("vanish.senders-message-enabled","%TargetedPlayer% Vanish has been Enabled");
         get().addDefault("vanish.senders-message-disabled","%TargetedPlayer% Vanish has been disabled");
+
+        //Gamemode Command
+        get().addDefault("gamemode.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("gamemode.command-usage","Please Enter a players name! Example: %commmand%");
+        get().addDefault("gamemode.victims-message","%Sender% has Changed your gamemode to %gamemode%");
+        get().addDefault("gamemode.senders-message-disabled","%TargetedPlayer% invincibility has been disabled");
+
 
     }
 }

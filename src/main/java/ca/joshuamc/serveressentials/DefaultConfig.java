@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
 public class DefaultConfig {
+
     //config File Getters & Setters
     private static String WELCOME_MESSAGE;
     private static String SERVER_NAME;
@@ -12,11 +13,9 @@ public class DefaultConfig {
     private static String JOIN_MESSAGE;
     private static String LEAVE_MESSAGE;
     private static String INVALID_PERMISSION;
-    private static boolean SILK_TOUCH_SPAWNERS;
-    private static boolean SILK_TOUCH_SPAWNERS_PERM_ONLY;
+
+    private static boolean EIGHTBALL_BQUESTION;
     private static Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("Server-Essentials");
-
-
 
 
     public static String getWelcomeMessage() {
@@ -48,14 +47,8 @@ public class DefaultConfig {
         INVALID_PERMISSION = plugin.getConfig().getString("permission-message").replaceAll("&","§");
         return INVALID_PERMISSION;
     }
-
-    public static boolean isSilkTouchSpawners() {
-        SILK_TOUCH_SPAWNERS = plugin.getConfig().getBoolean("silk-touch-spawners");
-        return SILK_TOUCH_SPAWNERS;
-    }
-
-    public static boolean isSilkTouchSpawnersPermOnly() {
-        SILK_TOUCH_SPAWNERS = plugin.getConfig().getBoolean("silk-touch-spawners-perm-only");
-        return SILK_TOUCH_SPAWNERS_PERM_ONLY;
+    public static boolean getEightBallQuestion() {
+        EIGHTBALL_BQUESTION = plugin.getConfig().getBoolean("broadcast-question");
+        return EIGHTBALL_BQUESTION;
     }
 }
