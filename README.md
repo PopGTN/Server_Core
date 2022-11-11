@@ -17,15 +17,15 @@ Here are some of the features
 * /fly - Allows players to fly.
   * Permissions
     * `se.fly` Allows players to toggle flight for themselves.
-    * `se.fly.other`  Allows players toggle flight for other
+    * `se.fly.other`  Allows players toggle flight for others.
 * /vanish - basically Invincibility, fly, and Invisibility Combined.
     * Permissions
         * `se.vanish` Allows players to toggle flight for themselves.
-          * `se.vanish.other`  Allows players toggle flight for other
+          * `se.vanish.other`  Allows players toggle flight for others.
 * /invincible - basically toggles invincibility.
     * Permissions
-        * `se.invincible` Allows players to toggle flight for themselves.
-            * `se.invincible.other`  Allows players toggle flight for other
+        * `se.invincible` Allows players to toggle invincibility for themselves.
+            * `se.invincible.other`  Allows players toggle invincibility for others.
 
 ## Todo 
 Here are some features that is on my Todo List
