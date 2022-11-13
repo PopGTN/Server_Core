@@ -1,4 +1,4 @@
-# Server Essentials
+# Server Core
 This my minecraft plugin made to be a core plugin. This is my first plugin. Im using this for practice for new concepts I learn in school. Feel Free to leave feedback to how I can improve my code.
 
 
