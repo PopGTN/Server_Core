@@ -38,5 +38,5 @@ Here are some features that is on my Todo List
 * Economy
 * Custom NPC/Slappers
 * Float texts (Holograms)
-* The ability to make Custom Mobs
-* The ability to make Custom Commands
+* Temp Baning and muting
+* homes and protection plugin
