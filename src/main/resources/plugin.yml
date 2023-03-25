@@ -20,8 +20,8 @@ commands:
     aliases: broadcast
   gamemode:
     description: change your gamemode.
-    usage: /<command> #<survival|creative|adventure|spectator> [player]
-    aliases: [ gm,gmc,gms,gma,gmsp,egm,egmc,egms,egma,egmsp,creative,survival,adventure,spectator ]
+    usage: /<command> <survival|creative|adventure|spectator> [player]
+    aliases: [gm,gmc,gms,gma,gmsp,egm,egmc,egms,egma,egmsp,creative,survival,adventure,spectator]
   invincible:
     description: Enable/disable invincibility.
     usage: /<command> [Player]
@@ -34,3 +34,19 @@ commands:
     description: Get 8ball answer
     usage: /<command>
     aliases: broadcast
+  setspawn:
+    description: set the world spawn point
+    permission: se.setspawn
+    usage: /<command>
+    permission-message:  You Don't Have Permisson <Command>
+  spawn:
+    description: Teleport to world spawn point
+    usage: /<command>
+    permission: se.spawn
+    permission-message:  You Don't Have Permisson <Command>
+  lobby:
+    usage: /<command>
+    description: Teleport to world spawn point
+    permission: se.lobby
+    permission-message: You Don't Have Permisson <Command>
+    aliases: hub

@@ -1,4 +1,4 @@
-package ca.joshuamc.serveressentials.util;
+package ca.joshuamc.serveressentials;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

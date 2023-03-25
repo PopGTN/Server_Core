@@ -1,6 +1,8 @@
 package ca.joshuamc.serveressentials;
 
 
+import ca.joshuamc.serveressentials.commands.SpawnCommand.SetSpawnCommand;
+import ca.joshuamc.serveressentials.commands.SpawnCommand.SpawnCommand;
 import ca.joshuamc.serveressentials.commands.*;
 import ca.joshuamc.serveressentials.listeners.JoinAndLeaveMessage;
 import ca.joshuamc.serveressentials.util.files.MessageConfig;
@@ -45,25 +47,31 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
 
 
     }
-    public void registerCommands(ServerEssentials serverEssentials) {
+    public void registerCommands(ServerEssentials plugin) {
+
+
+        //SetSpawn
+        plugin.getCommand("setspawn").setExecutor(new SetSpawnCommand(this));
+        plugin.getCommand("spawn").setExecutor(new SpawnCommand(this));
+        //Spawn
 
 
         //flight
-        serverEssentials.getCommand("fly").setExecutor(new FlightCommand());
+        plugin.getCommand("fly").setExecutor(new FlightCommand());
 
         //invincible
 //        serverEssentials.getCommand("invincible").setExecutor(new InvincibleCommand());
 
         //Vanish
-        serverEssentials.getCommand("vanish").setExecutor(new VanishCommand(this));
+        plugin.getCommand("vanish").setExecutor(new VanishCommand(this));
 
         //Shout
-        serverEssentials.getCommand("shout").setExecutor(new ShoutCommand());
+        plugin.getCommand("shout").setExecutor(new ShoutCommand());
 
         //Gamemode Command
-        serverEssentials.getCommand("gamemode").setExecutor(new GamemodeCommand());
+        plugin.getCommand("gamemode").setExecutor(new GamemodeCommand());
 
 
-        serverEssentials.getCommand("8ball").setExecutor(new EightBall());
+        plugin.getCommand("8ball").setExecutor(new EightBall());
     }
 }
