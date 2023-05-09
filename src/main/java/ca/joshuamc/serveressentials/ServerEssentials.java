@@ -71,7 +71,5 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         //Gamemode Command
         plugin.getCommand("gamemode").setExecutor(new GamemodeCommand());
 
-
-        plugin.getCommand("8ball").setExecutor(new EightBall());
     }
 }
