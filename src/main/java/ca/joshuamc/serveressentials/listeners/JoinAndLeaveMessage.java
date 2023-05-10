@@ -26,14 +26,14 @@ public class JoinAndLeaveMessage implements Listener {
 
 
         String player = joinPlayer.getDisplayName();
-        String joinmessage = DefaultConfig.getJoinMessage().replaceAll("%player%", player).replaceAll("%server-name%", DefaultConfig.getServerName());
-        String welcomeMessage = DefaultConfig.getWelcomeMessage().replaceAll("%player%", player).replaceAll("%server-name%", DefaultConfig.getServerName());
+        String joinmessage = plugin.getConfig().getString("join-message").replaceAll("&","§").replaceAll("%player%", player).replaceAll("%server-name%", DefaultConfig.getServerName());
+        String welcomeMessage = plugin.getConfig().getString("welcome-message").replaceAll("&","§").replaceAll("%player%", player).replaceAll("%server-name%", DefaultConfig.getServerName());
 
         //Sends Join Message
         join.setJoinMessage(joinmessage);
 
         //Checks if Welcome Message is one Time Only
-        if(!joinPlayer.hasPlayedBefore() && (DefaultConfig.getWelcomeMessageSwitch() == true)){
+        if(!joinPlayer.hasPlayedBefore() && (plugin.getConfig().getBoolean("First-time-only"))){
             joinPlayer.sendMessage(welcomeMessage);
         }
     }
@@ -41,7 +41,7 @@ public class JoinAndLeaveMessage implements Listener {
     public void onPlayerLeaveEvent(PlayerQuitEvent leave) {
         Player joinPlayer = leave.getPlayer();
         String player = joinPlayer.getDisplayName();
-        String leaveMessage = DefaultConfig.getLeaveMessage().replaceAll("%player%", player).replaceAll("%server-name%", DefaultConfig.getServerName());
+        String leaveMessage = plugin.getConfig().getString("leave-message").replaceAll("&","§").replaceAll("%player%", player).replaceAll("%server-name%", DefaultConfig.getServerName());
         leave.setQuitMessage(leaveMessage);
     }
 }
