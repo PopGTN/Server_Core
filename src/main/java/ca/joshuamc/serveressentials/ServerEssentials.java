@@ -2,6 +2,7 @@ package ca.joshuamc.serveressentials;
 
 
 import ca.joshuamc.serveressentials.commands.*;
+import ca.joshuamc.serveressentials.commands.GamemodeCommand;
 import ca.joshuamc.serveressentials.commands.SpawnCommand.SetSpawnCommand;
 import ca.joshuamc.serveressentials.commands.SpawnCommand.SpawnCommand;
 import ca.joshuamc.serveressentials.listeners.JoinAndLeaveMessage;
@@ -26,7 +27,7 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         SpigotUtil.configDefaults(this);
 
         System.out.println("Server-Essentials as been Started!");
-        registerEvents();
+        registerEvents(this);
         registerCommands(this);
 
     }
@@ -36,7 +37,7 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         System.out.println("Server-Essentials as been stopped!");
 
     }
-    public void registerEvents() {
+    public void registerEvents(ServerEssentials plugin) {
         PluginManager pm = Bukkit.getServer().getPluginManager();
 
         pm.registerEvents(new JoinAndLeaveMessage(this), this);
@@ -44,6 +45,11 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
 
     }
     public void registerCommands(ServerEssentials plugin) {
+
+        //Gamemode Command
+        plugin.getCommand("gamemode").setExecutor(new GamemodeCommand(this));
+
+
         //SetSpawn
         plugin.getCommand("setspawn").setExecutor(new SetSpawnCommand(this));
         //Spawn
@@ -53,14 +59,12 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         plugin.getCommand("fly").setExecutor(new FlightCommand(this));
 
         //invincible
-//        serverEssentials.getCommand("invincible").setExecutor(new InvincibleCommand());
+        //plugin.getCommand("invincible").setExecutor(new InvincibleCommand());
 
         //Vanish
         plugin.getCommand("vanish").setExecutor(new VanishCommand(this));
 
-        //Shout
-        //Gamemode Command
-        plugin.getCommand("gamemode").setExecutor(new GamemodeCommand(this));
+
 
     }
 }

@@ -1,35 +1,32 @@
-package ca.joshuamc.serveressentials.commands.GMCommand;
+package ca.joshuamc.serveressentials.commands;
 
 import ca.joshuamc.serveressentials.ServerEssentials;
 import ca.joshuamc.serveressentials.SpigotUtil;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
+import org.bukkit.GameMode;
+import org.bukkit.command.*;
+import org.bukkit.entity.Player;
 
 public class GamemodeCommand implements CommandExecutor {
+    ServerEssentials plugin;
 
-    public ServerEssentials plugin;
-    public GamemodeCommand(ServerEssentials plugin){
+    public GamemodeCommand(ServerEssentials plugin) {
         this.plugin = plugin;
-        plugin.getCommand("gamemode").setDescription(SpigotUtil.getLangMsg(""));
+        plugin.getCommand("gamemode").setDescription(SpigotUtil.getLangMsg("gamemode.description"));
     }
+
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
+        sender.sendMessage(label);
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (!player.hasPermission("se.gamemode")) {
-                sender.sendMessage(CommandConfig.getInvalidPermsMsg());
+                sender.sendMessage("Invalid Permissions");
 
                 return true;
             } else if (args.length == 2) {
-                String gamemode = setGamemode(args[1], args[0]);
-                if (!gamemode.equals(null)) {
-                    player.sendMessage("Your game has changed to " + gamemode);
-                } else {
-                    player.sendMessage("Invalid Gamemode!");
-                }
+                sender.sendMessage("Not Implemented Yet!");
             } else {
                 String gamemode = setGamemode(player, args[0]);
                 if (!gamemode.equals(null)) {
@@ -41,7 +38,7 @@ public class GamemodeCommand implements CommandExecutor {
 
 
         } else if (sender instanceof ConsoleCommandSender || sender instanceof BlockCommandSender) {
-            sender.sendMessage(MessageConfig.get().getString("gamemode.command-usage").replaceAll("&", "§"));
+            sender.sendMessage(SpigotUtil.getLangMsg("gamemode.command-usage"));
         }
         return true;
     }
@@ -83,3 +80,5 @@ public class GamemodeCommand implements CommandExecutor {
         }
     }
 }
+
+

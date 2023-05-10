@@ -155,6 +155,7 @@ public class SpigotUtil implements SpigotConst {
 
 
         //Invincible Commands
+        LANG_FILE.getConfig().addDefault("invincible.description","Makes You invincible");
         LANG_FILE.getConfig().addDefault("invincible.command-usage","Please Enter a players name! Example: %Command%");
         LANG_FILE.getConfig().addDefault("invincible.onEnabled","Your invincibility has been Enabled by %Sender%");
         LANG_FILE.getConfig().addDefault("invincible.onDisabled","Your invincibility has been disabled by %Sender%");
@@ -165,6 +166,7 @@ public class SpigotUtil implements SpigotConst {
 
 
         //Vanish Command
+        LANG_FILE.getConfig().addDefault("vanish.description","Toggles Vanish off or on");
         LANG_FILE.getConfig().addDefault("vanish.command-usage","Please Enter a players name! Example: %Command%");
         LANG_FILE.getConfig().addDefault("vanish.onEnabled","Your Vanish has been Enabled by %Sender%");
         LANG_FILE.getConfig().addDefault("vanish.onDisabled","Your Vanish has been disabled by %Sender%");
@@ -172,9 +174,10 @@ public class SpigotUtil implements SpigotConst {
         LANG_FILE.getConfig().addDefault("vanish.senders-message-disabled","%TargetedPlayer% Vanish has been disabled");
 
         //Gamemode Command
+        LANG_FILE.getConfig().addDefault("gamemode.description","Changes your Gamemode");
         LANG_FILE.getConfig().addDefault("gamemode.invalid-player","Player wasn't found");
         LANG_FILE.getConfig().addDefault("gamemode.invalid-gamemode","Invalid Gamemode");
-        LANG_FILE.getConfig().addDefault("gamemode.victims-message","%Sender% has Changed your gamemode to %Gamemode%");
+        LANG_FILE.getConfig().addDefault("gamemode.victims-message","%Sender% has Changed your gamemode to %G  amemode%");
         LANG_FILE.getConfig().addDefault("gamemode.description","Change your's or other's gamemode");
         LANG_FILE.getConfig().addDefault("gamemode.self-change","Your gamemode has changed to %Gamemode%");
         LANG_FILE.getConfig().addDefault("gamemode.broadcast-msg","%sSender% has Changed %TargetedPlayer% gamemode  to %Gamemode%");

@@ -13,6 +13,7 @@ public class SetSpawnCommand implements CommandExecutor {
 
     public SetSpawnCommand(ServerEssentials plugin) {
         this.plugin = plugin;
+        plugin.getCommand("setSpawn").setDescription(SpigotUtil.getLangMsg("This Command will Set your Spawn Point!"));
     }
 
     @Override

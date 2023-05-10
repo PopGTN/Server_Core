@@ -3,6 +3,7 @@ package ca.joshuamc.serveressentials.commands;
 
 import ca.joshuamc.serveressentials.ServerEssentials;
 import ca.joshuamc.serveressentials.SpigotConst;
+import ca.joshuamc.serveressentials.SpigotUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -30,6 +31,7 @@ public class VanishCommand implements CommandExecutor, SpigotConst {
 
     public VanishCommand(ServerEssentials plugin) {
         Plugin = plugin;
+        plugin.getCommand("vanish").setDescription(SpigotUtil.getLangMsg("vanish.description"));
     }
 
     public void addVanish(Player player){

@@ -21,7 +21,7 @@ commands:
   gamemode:
     description: change your gamemode.
     usage: /<command> <survival|creative|adventure|spectator> [player]
-    aliases: [gm,gmc,gms,gma,gmsp,egm,egmc,egms,egma,egmsp,creative,survival,adventure,spectator]
+    aliases: [gm,gmc,gms,gma,gmsp,segm,segmc,segms,segma,segmsp,creative,survival,adventure,spectator]
   invincible:
     description: Enable/disable invincibility.
     usage: /<command> [Player]
