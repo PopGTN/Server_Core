@@ -2,7 +2,6 @@ package ca.joshuamc.serveressentials.commands;
 
 
 import ca.joshuamc.serveressentials.ServerEssentials;
-import ca.joshuamc.serveressentials.SpigotConst;
 import ca.joshuamc.serveressentials.SpigotUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -11,7 +10,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class FlightCommand implements CommandExecutor, SpigotConst {
+public class FlightCommand implements CommandExecutor {
 
     private ServerEssentials plugin;
 
@@ -23,7 +22,7 @@ public class FlightCommand implements CommandExecutor, SpigotConst {
     public boolean onCommand(CommandSender sender ,Command command ,String label ,String[] args) {
 
         if (!(sender instanceof Player) && (args.length == 0)) {
-            sender.sendMessage(LANG_FILE.getConfig().getString("flight-command.command-usage").replaceAll("&" , "§").replaceAll("%commmand%" , label));
+            sender.sendMessage(SpigotUtil.getLangMsg("flight-command.command-usage").replaceAll("%commmand%" , label));
             return true;
         } else if ((args.length == 1) && !(sender instanceof Player)) {
             String playerName = args[0];

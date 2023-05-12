@@ -24,7 +24,7 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         saveDefaultConfig();
 
         //Message.yml Custom Config
-        SpigotUtil.configDefaults(this);
+        SpigotUtil.onStartUp(this);
 
         System.out.println("Server-Essentials as been Started!");
         registerEvents(this);
@@ -62,7 +62,7 @@ public final class ServerEssentials extends JavaPlugin implements Listener {
         //plugin.getCommand("invincible").setExecutor(new InvincibleCommand());
 
         //Vanish
-        plugin.getCommand("vanish").setExecutor(new VanishCommand(this));
+        //plugin.getCommand("vanish").setExecutor(new VanishCommand(this));
 
 
 
